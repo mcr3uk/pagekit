@@ -12,3 +12,9 @@ RUN apk add zlib-dev
 RUN apk add libzip-dev
 
 RUN docker-php-ext-install zip
+
+COPY ./pagekit/ /pagekit/
+
+VOLUME ["/pagekit"]
+
+EXPOSE 80/tcp

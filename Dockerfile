@@ -15,6 +15,6 @@ RUN docker-php-ext-install zip
 
 COPY ./pagekit/ /pagekit/
 
-VOLUME ["/pagekit"]
+VOLUME ["/pagekit/storage", "pagekit"]
 
 EXPOSE 80/tcp
